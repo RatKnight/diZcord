@@ -436,6 +436,7 @@ DISCORDBOT(){
     if [ $? -ne 0 ]; then
       exit 1
     fi
+done #add a done to break the while.
 }
 
 CRONTAB(){
