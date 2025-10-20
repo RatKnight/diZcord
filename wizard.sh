@@ -6,8 +6,8 @@ ENDDOTS=""
 
 # Set up directories
 I_AM=$(whoami)
-sudo mkdir -p /opt/dizcord/playerdb/html /opt/dizcord/times /opt/dizcord/boidbot
-sudo chown -R "$I_AM":"$I_AM" /opt/dizcord
+mkdir -p /opt/dizcord/playerdb/html /opt/dizcord/times /opt/dizcord/boidbot
+chown -R "$I_AM":"$I_AM" /opt/dizcord
 
 # FUNCTIONS
 
@@ -239,7 +239,7 @@ SETTINGSCHECK(){
     ## if there's one existing settings file
     ######
     SETFILE="" #create variable
-    SETFILE=$(cat $(find /opt/dizcord/ -type f -name "settings-*") | jq -r '.server'
+    SETFILE=$(cat $(find /opt/dizcord/ -type f -name "settings-*") | jq -r '.server')
     whiptail --title "Existing Install found" --yesno --yes-button "Update" --no-button "New Instance" "The settings for $SETFILE were found. Would you like to update them or create a new instance?" 26 80
     if [[ $? = 1 ]]; then
       ######
