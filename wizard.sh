@@ -6,8 +6,8 @@ ENDDOTS=""
 
 # Set up directories
 I_AM=$(whoami)
-mkdir -p /opt/dizcord/playerdb/html /opt/dizcord/times /opt/dizcord/boidbot
-chown -R "$I_AM":"$I_AM" /opt/dizcord
+sudo mkdir -p /opt/dizcord/playerdb/html /opt/dizcord/times /opt/dizcord/boidbot
+sudo chown -R "$I_AM":"$I_AM" /opt/dizcord
 
 # FUNCTIONS
 
