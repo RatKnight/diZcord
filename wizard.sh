@@ -436,7 +436,12 @@ DISCORDBOT(){
     if [ $? -ne 0 ]; then
       exit 1
     fi
-done #add a done to break the while.
+
+    # If the user entered a token, break the loop
+    if [[ -n "$TOKEN" ]]; then
+      break
+    fi
+  done
 }
 
 CRONTAB(){
