@@ -219,7 +219,9 @@ SUGGEST(){
 
 VALIDATE_WEBHOOK() {
   # Function to validate Discord Webhook
-  local HOOKREGEX="^https://discord\.com/api/webhooks/[0-9]+/[a-zA-Z0-9_-]+$"
+  #local HOOKREGEX="^https://discord\.com/api/webhooks/[0-9]+/[a-zA-Z0-9_-]+$"
+  #updating to use "discordapp.com" as well since discord decided to change it for no reason.
+  local HOOKREGEX="^https://(discord\.com|discordapp\.com)/api/webhooks/[0-9]+/[a-zA-Z0-9_-]+$"
   [[ $1 =~ $HOOKREGEX ]]
 }
 
