@@ -1,6 +1,10 @@
 # diZcord
 Project Zomboid / Discord integration
 
+# Update - 20 Oct 2025
+
+I am forking this to correct some problems, specifically in the webhook checking.  The script currently sends a "GET" request, which doesn't work.  Needs to be changed to a "POST" request.
+
 ***
 
 # Update - 26 Sept 2024 
